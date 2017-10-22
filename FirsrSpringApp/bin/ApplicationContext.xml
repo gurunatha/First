@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	default-init-method="init1" default-destroy-method="destroy1">
+
+	<!-- <bean id="account" class="org.gurutech.first.Account"> <property name="balance" 
+		value="20000"></property> </bean> -->
+	<bean id="res" class="org.gurutech.cafe.Restaurant" >
+		<!-- <constructor-arg ref="tea" /> -->
+		<!-- <property name="restaurantWaitersList">
+			<list>
+				<value>Mr.Guru</value>
+				<value>Mr.Venky</value>
+				<value>Mr.Mohan</value>
+				<value>Mr.Ashok</value>
+				<value>Mr.Ling swami</value>
+			</list>
+		</property> -->
+		<property name="drink" ref="tea"/>
+	</bean>
+	<bean id="tea" class="org.gurutech.cafe.Tea"/>
+	<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/> -->
+
+	<bean class="org.gurutech.cafe.DemoBeanPostProcessor"/>
+	<bean class="org.gurutech.cafe.DemoBeanPostProcessor1"/>
+</beans>
