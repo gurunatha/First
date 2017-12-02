@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mtms.entities">
+	<class name="Journey" table="JOURNEY">
+		<id name="journeyId" column="JOURNEY_ID">
+			<generator class="increment" />
+		</id>
+		<property name="source" column="SOURCE" />
+		<property name="destination" column="DEST" />
+		<property name="journeyDate" column="JOURNEY_DT" />
+		<property name="fare" column="FARE" />
+		<property name="distance" column="DISTANCE" />
+
+		<set name="passengers" table="JOURNEY_PASSENGER" cascade="save-update">
+			<key column="JOURNEY_ID" not-null="true" />
+			<many-to-many column="PASSENGER_ID" class="Passenger" />
+		</set>
+	</class>
+	<query name="journeyById">
+		<![CDATA[from Journey j where j.journeyId = ?]]>
+	</query>
+</hibernate-mapping>
+
+
+
+
+
+
+
+
+

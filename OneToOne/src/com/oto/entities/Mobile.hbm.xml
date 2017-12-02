@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.oto.entities">
+	<class name="Mobile" table="MOBILE">
+		<id name="mobileId" column="MOBILE_ID">
+			<generator class="increment" />
+		</id>
+		<property name="modelNo" column="MODEL_NO" not-null="true" />
+		<property name="modelName" column="MODEL_NM" not-null="true" />
+		<property name="description" column="DESCR" />
+		<property name="type" column="MOBILE_TYPE" not-null="true" />
+		<property name="manufacturer" column="MANUFACTURER" not-null="true" />
+		<property name="amount" column="AMOUNT" not-null="true" />
+	</class>
+</hibernate-mapping>

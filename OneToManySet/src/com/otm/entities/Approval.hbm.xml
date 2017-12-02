@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otm.entities">
+	<class name="Approval" table="APPROVAL">
+		<id name="approvalId" column="APPROVAL_ID">
+			<generator class="increment" />
+		</id>
+		<property name="approvalName" column="APPROVAL_NM" />
+		<property name="description" column="DESCR" />
+		<property name="issuedDate" column="ISSUED_DT" />
+		<property name="issuedAuthority" column="ISSUED_AUTHORITY" />
+		<many-to-one column="PROPERTY_ID" name="property"/>
+	</class>
+</hibernate-mapping>

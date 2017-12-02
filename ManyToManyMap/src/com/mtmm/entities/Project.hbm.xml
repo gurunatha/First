@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mtmm.entities">
+	<class name="Project" table="PROJECT">
+		<id name="projectId" column="PROJECT_ID">
+			<generator class="increment" />
+		</id>
+		<property name="title" column="TITLE" />
+		<property name="description" column="DESCR" />
+		<property name="startDate" column="START_DT" />
+		<property name="endDate" column="END_DT" />
+		<property name="client" column="CLIENT_NM" />
+		<property name="keyTechnologies" column="KEY_TECHNOLOGIES" />
+
+		<map name="assignedResources" table="PROJECT_RESOURCES" cascade="save-update">
+			<key column="PROJECT_ID" />
+			<map-key column="CONTRACT_ID" type="string" length="50" />
+			<many-to-many column="RESOURCE_ID" class="Resource" />
+		</map>
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+
+
+

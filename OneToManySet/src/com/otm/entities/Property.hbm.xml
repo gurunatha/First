@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otm.entities">
+	<class name="Property" table="PROPERTY">
+		<id name="propertyId" column="PROPERTY_ID">
+			<generator class="increment" />
+		</id>
+		<property name="propertyName" column="PROPERTY_NM" />
+		<property name="description" column="DESCR" />
+		<property name="type" column="PROPERTY_TYPE" />
+		<property name="area" column="AREA" />
+		<property name="location" column="LOCATION" />
+		<property name="amount" column="AMOUNT" />
+
+		<set name="approvals" inverse="true">
+			<key column="PROPERTY_ID" not-null="true" />
+			<one-to-many class="Approval" />
+		</set>
+		
+		<!-- <bag name="approvals">
+			<key column="PROPERTY_ID" />
+			<one-to-many class="Approval" />
+		</bag> -->
+	</class>
+</hibernate-mapping>
+
+
+
+
+

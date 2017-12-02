@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.slc.entities">
+	<class name="Job" table="JOBS">
+		<cache usage="read-only" />
+		<id name="jobId" column="JOB_ID">
+			<generator class="increment" />
+		</id>
+		<property name="jobDescription" column="JOB_DESCR" />
+		<property name="level" column="JOB_LEVEL" />
+		<property name="technology" column="TECHNOLOGY" />
+		<property name="postedDate" column="JOB_POSTED_DT" />
+		<property name="location" column="JOB_LOCATION" />
+	</class>
+</hibernate-mapping>

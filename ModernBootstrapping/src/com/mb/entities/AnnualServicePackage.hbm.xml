@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mb.entities">
+	<class name="AnnualServicePackage" table="ANNUAL_SERVICE_PKGS">
+		<id name="annualServicePackageNo" column="ANNUAL_PKG_SERIVCE_NO" />
+		<property name="packageName" column="PACKAGE_NM" />
+		<property name="amount" column="AMOUNT" />
+		<property name="validityInDays" column="VALIDITY_IN_DAYS" />
+	</class>
+</hibernate-mapping>

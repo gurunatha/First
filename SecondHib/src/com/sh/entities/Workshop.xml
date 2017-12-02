@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sh.entities">
+	<class name="Workshop" table="WORKSHOP">
+		<id name="no" column="WORKSHOP_NO" />
+		<property name="name" column="WORKSHOP_NM" />
+		<property name="estDate" column="EST_DT" />
+		<property name="websiteAddress" column="WEBSITE_ADDRESS" />
+		<property name="addressLine1" column="ADDRESS_LINE1" />
+		<property name="addressLine2" column="ADDRESS_LINE2" />
+		<property name="city" />
+		<property name="state" />
+		<property name="zip" />
+		<property name="country" />
+		<property name="primaryContactNo" column="PRIMARY_CONTACT_NO" />
+		<property name="altContactNo" column="ALT_CONTACT_NO" />
+		<property name="email" column="EMAIL" />
+		<property name="fax" column="FAX" />
+	</class>
+</hibernate-mapping>
+
+
+
+

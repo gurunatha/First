@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otmm.entities">
+	<class name="Incident" table="INCIDENT">
+		<id name="incidentId" column="INCIDENT_ID">
+			<generator class="increment" />
+		</id>
+		<property name="description" column="DESCR" />
+		<property name="reportedDate" column="REPORTED_DATE" />
+		<property name="priority" column="PRIORITY" />
+		<property name="status" column="STATUS" />
+	</class>
+</hibernate-mapping>

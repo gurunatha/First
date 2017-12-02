@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mtml.entities">
+	<class name="Invoice" table="INVOICE">
+		<id name="invoiceId" column="INVOICE_ID">
+			<generator class="increment" />
+		</id>
+		<property name="invoiceDate" column="INVOICE_DT" />
+		<property name="customerName" column="CUSTOMER_NM" />
+		<property name="mobile" column="MOBILE" />
+		<property name="email" column="EMAIL" />
+		<property name="amount" column="AMOUNT" />
+
+		<list name="products" table="INVOICE_PRODUCTS" cascade="save-update">
+			<key column="INVOICE_ID" not-null="true" />
+			<list-index column="SERIAL_NO" base="1" />
+			<many-to-many column="PRODUCT_ID" class="Product" />
+		</list>
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+
+
+
+
+

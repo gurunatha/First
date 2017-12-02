@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.oto.entities">
+	<class name="Card" table="CARD">
+		<id name="cardId" column="CARD_ID">
+			<generator class="increment" />
+		</id>
+		<property name="cardNumber" column="CARD_NUMBER" />
+		<property name="type" column="CARD_TYPE" />
+		<property name="expiryMonth" column="EXPIRY_MONTH" />
+		<property name="expiryYear" column="EXPIRY_YEAR" />
+		<property name="cvv" column="CVV" />
+		<property name="nameOnCard" column="NAME_ON_CARD" />
+		<property name="issuedDate" column="ISSUED_DT" />
+		<many-to-one name="holder" column="CARD_HOLDER_ID"
+			class="CardHolder" unique="true" not-null="true" />
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+
+
+

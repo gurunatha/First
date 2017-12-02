@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.otmm.entities">
+	<class name="SupportEngineer" table="SUPPORT_ENGINEER">
+		<id name="supportEngineerId" column="SUPPORT_ENGINEER_ID">
+			<generator class="increment" />
+		</id>
+		<property name="name" column="NAME" />
+		<property name="designation" column="DESIGNATION" />
+		<property name="level" column="ENGINEER_LEVEL" />
+		<property name="contactNo" column="CONTACT_NO" />
+		<property name="email" column="EMAIL" />
+
+		<map name="assignedIncidents" cascade="all">
+			<key column="SUPPORT_ENGINEER_ID" />
+			<map-key column="CASE_LOG_ID" type="string" length="50" />
+			<one-to-many class="Incident" />
+		</map>
+	</class>
+</hibernate-mapping>
+
+
+
+

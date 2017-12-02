@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.oto.entities">
+	<class name="Specification" table="SPECIFICATION">
+		<id name="mobileId" column="MOBILE_ID">
+			<generator class="foreign">
+				<param name="property">mobile</param>
+			</generator>
+		</id>
+		<property name="networkType" column="NETWORK_TYPE" not-null="true" />
+		<property name="dualSim" column="DUAL_SIM_SUPPORT" not-null="true" />
+		<property name="mobileData" column="MOBILE_DATA" not-null="true" />
+		<property name="processor" column="PROCESSOR_TYPE" not-null="true" />
+		<property name="storage" column="STORAGE_CAPACITY" not-null="true" />
+		<property name="ram" column="RAM" not-null="true" />
+		<one-to-one name="mobile" />
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+
+
+
+
