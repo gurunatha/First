@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpc.entities">
+	<subclass name="AccidentalInsurancePlan" extends="InsurancePlan"
+		discriminator-value="AccidentalInsurancePlan">
+		<property name="coveragePeriod" column="COVERAGE_PERIOD" />
+		<property name="partialDisability" column="PARTIAL_DISABILITY_COVERAGE" />
+		<property name="deathCoverage" column="DEATH_COVERAGE" />
+	</subclass>
+</hibernate-mapping>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.msf.entities">
+	<class name="ServiceType" table="SERVICE_TYPES">
+		<id name="serviceTypeId" column="SERVICE_TYPE_ID" />
+		<property name="serviceName" column="SERVICE_NM" />
+	</class>
+</hibernate-mapping>

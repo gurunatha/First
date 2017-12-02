@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.gl.entities">
+	<class name="ServiceType" table="SERVICE_TYPES" lazy="true"
+		proxy="IServiceType">
+		<id name="serviceTypeId" column="SERVICE_TYPE_ID" />
+		<property name="serviceName" column="SERVICE_NM" />
+	</class>
+</hibernate-mapping>

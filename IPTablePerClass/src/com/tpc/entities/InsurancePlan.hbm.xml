@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpc.entities">
+	<class name="InsurancePlan" table="INSURANCE_PLAN"
+		discriminator-value="InsurancePlan">
+		<id name="uPlanNo" column="U_PLAN_NO">
+			<generator class="increment" />
+		</id>
+		<discriminator column="PLAN_TYPE" />
+		<property name="planName" column="PLAN_NM" not-null="true" />
+		<property name="description" column="DESCR" not-null="false" />
+		<property name="planProvider" column="PLAN_PROVIDER"
+			not-null="true" />
+	</class>
+</hibernate-mapping>
