@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ck.entities">
+	<class name="RationCard" table="RATION_CARD">
+		<composite-id name="id">
+			<key-property name="rationCardNo" column="RATION_CARD_NO" />
+			<key-property name="wardNo" column="WARD_NO" />
+		</composite-id>
+		<property name="cardHolderName" column="CARD_HOLDER_NM" />
+		<property name="gender" column="GENDER" />
+		<property name="dateOfBirth" column="DATE_OF_BIRTH" />
+	</class>
+</hibernate-mapping>

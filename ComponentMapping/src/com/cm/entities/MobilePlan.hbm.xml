@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.cm.entities">
+	<class name="MobilePlan" table="MOBILE_PLAN">
+		<id name="planId" column="PLAN_ID">
+			<generator class="increment" />
+		</id>
+		<property name="planName" column="PLAN_NM" />
+		<property name="description" column="DESCR" />
+		<property name="billingDayOfMonth" column="BILLING_DAY_OF_MONTH" />
+		<property name="rentalAmount" column="RENTAL_AMOUNT" />
+		<component name="tarrifDetails" class="TarrifDetails">
+			<property name="localCallCost" column="LOCAL_CALL_COST" />
+			<property name="stdCallCost" column="STD_CALL_COST" />
+			<property name="isdCallCost" column="ISD_CALL_COST" />
+			<property name="localMessageCost" column="LOCAL_MESSAGE_COST" />
+		</component>
+	</class>
+</hibernate-mapping>

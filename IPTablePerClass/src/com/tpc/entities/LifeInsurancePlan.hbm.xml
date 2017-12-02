@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpc.entities">
+	<subclass name="LifeInsurancePlan" extends="InsurancePlan"
+		discriminator-value="LifeInsurancePlan">
+		<property name="eligibleAge" column="MAX_ELIGIBLE_AGE" />
+		<property name="planPeriod" column="MIN_PLAN_PERIOD" />
+		<property name="preMedicalCheckup" column="PRE_MEDICAL_CHECKUP_REQ" />
+	</subclass>
+</hibernate-mapping>

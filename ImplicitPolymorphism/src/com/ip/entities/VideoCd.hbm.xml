@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.ip.entities">
+	<class name="VideoCd" table="VIDEO_CD">
+		<id name="id" column="CD_ID">
+			<generator class="increment"/>
+		</id>
+		<property name="title" column="TITLE" not-null="true"/>
+		<property name="price" column="PRICE" not-null="true" />
+		<property name="director" column="DIRECTOR" not-null="true"/>
+		<property name="duration" column="DURATION" not-null="true" />
+	</class>
+</hibernate-mapping>

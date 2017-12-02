@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 23, 2016 7:00:05 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.flc.entities">
+	<class name="Mobile" table="MOBILE" dynamic-update="true">
+		<id name="id" column="MOBILE_ID" type="int" />
+		<property name="modelName" column="MODEL_NAME" type="string"
+			length="50" not-null="true" />
+		<property name="description" column="DESCR" type="string"
+			length="200" not-null="false" />
+		<property name="manufacturer" column="MANUFACTURER" type="string"
+			length="100" />
+		<property name="type" column="MOBILE_TYPE" length="1" type="string" />
+		<property name="networkType" column="NETWORK_TYPE" type="string"
+			length="4" />
+		<property name="amount" column="AMOUNT" type="float" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 23, 2016 7:00:05 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.ig.entities">
+	<class name="Policy" table="POLICY">
+		<id name="id" column="POLICY_ID" length="32">
+			<generator class="com.ig.generators.PolicyIDGenerator">
+				<param name="prefix">P</param>
+			</generator>
+		</id>
+		<property name="policyName" column="POLICY_NM" length="100"
+			not-null="true" />
+		<property name="description" column="DESCR" length="500"
+			not-null="false" />
+		<property name="type" column="POLICY_TYPE" length="20"
+			not-null="true" />
+		<property name="minTenure" column="MIN_TENURE" length="3"
+			not-null="true" />
+		<property name="maxTenure" column="MAX_TENURE" length="3"
+			not-null="true" />
+		<property name="eligibleAge" column="MAX_ELIGIBLE_AGE"
+			length="3" not-null="true" />
+	</class>
+</hibernate-mapping>
