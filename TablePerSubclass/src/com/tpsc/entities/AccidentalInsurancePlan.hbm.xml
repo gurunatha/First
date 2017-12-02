@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpsc.entities">
+	<joined-subclass name="AccidentalInsurancePlan" table="ACCIDENTAL_INSURANCE_PLAN"
+		extends="InsurancePlan">
+		<!-- foreign key column of my table -->
+		<key column="U_PLAN_NO"/>
+		<property name="coveragePeriod" column="COVERAGE_PERIOD" not-null="true"/>
+		<property name="partialDisability" column="PARTIAL_DISABILITY_COVERAGE" not-null="true"/>
+		<property name="deathCoverage" column="DEATH_COVERAGE"
+	not-null="true" />
+	</joined-subclass>
+</hibernate-mapping>

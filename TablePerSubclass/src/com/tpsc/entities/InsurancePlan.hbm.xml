@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpsc.entities">
+	<class name="InsurancePlan" table="INSURANCE_PLAN">
+		<id name="uPlanNo" column="U_PLAN_NO">
+			<generator class="increment" />
+		</id>
+		<property name="planName" column="PLAN_NM" />
+		<property name="description" column="DESCR" />
+		<property name="planProvider" column="PLAN_PROVIDER" />
+	</class>
+</hibernate-mapping>
+	
+	

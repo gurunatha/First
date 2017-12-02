@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fh.entities.Customer" table="CUSTOMER">
+		<id name="id" type="int">
+			<column name="CUSTOMER_ID" length="5" />
+		</id>
+		<property name="firstName" type="string">
+			<column name="FIRSTNAME" not-null="true" length="50" />
+		</property>
+		<property name="lastName" type="string">
+			<column name="LASTNAME" length="50" />
+		</property>
+		<property name="mobile" type="string">
+			<column name="MOBILE" not-null="true" unique="true" length="13" />
+		</property>
+		<property name="email" type="string">
+			<column name="EMAIL" not-null="true" unique="true" length="100" />
+		</property>
+		<!-- <property name="dob" type="date">
+			<column name="DATE_OF_BIRTH" />
+		</property> -->
+		<property name="gender" type="string">
+			<column name="GENDER" />
+		</property>
+	</class>
+</hibernate-mapping>

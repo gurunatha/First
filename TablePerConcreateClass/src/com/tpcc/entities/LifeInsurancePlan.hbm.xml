@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 23, 2016 7:00:05 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.tpcc.entities">
+	<union-subclass name="LifeInsurancePlan" table="LIFE_INSURANCE_PLAN"
+		extends="InsurancePlan">
+		<property name="eligibleAge" column="MAX_ELIGIBLE_AGE" />
+		<property name="planPeriod" column="PLAN_PERIOD" />
+		<property name="preMedicalCheckup" column="PRE_MEDICAL_CHECKUP_REQ" />
+	</union-subclass>
+</hibernate-mapping>

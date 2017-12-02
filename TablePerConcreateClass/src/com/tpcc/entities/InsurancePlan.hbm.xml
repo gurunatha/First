@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 23, 2016 7:00:05 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.tpcc.entities">
+	<class name="InsurancePlan" table="INSURANCE_PLAN">
+		<id name="uPlanNo" column="U_PLAN_NO">
+			<generator class="sequence" />
+		</id>
+		<property name="planName" column="PLAN_NM" />
+		<property name="description" column="DESCR" />
+		<property name="planProvider" column="PLAN_PROIVDER" />
+	</class>
+</hibernate-mapping>

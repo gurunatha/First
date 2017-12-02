@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.wm.entities">
+	<class name="AdEnquiry" table="AD_ENQUIRY">
+		<id name="id" column="AD_ENQUIRY_ID" unsaved-value="0">
+			<generator class="increment" />
+		</id>
+		<property name="description" column="DESCR" />
+		<property name="duration" column="DURATION" not-null="false" />
+		<property name="email" />
+		<property name="mobile" />
+		<property name="place" />
+		<property name="onTv">
+			<column name="ON_TV" default="0" not-null="false" />
+		</property>
+		<property name="internetMedia">
+			<column name="INTERNET_MEDIA" default="0" not-null="false" />
+		</property>
+		<property name="newsPaper">
+			<column name="NEWSPAPER" default="0" not-null="false" />
+		</property>
+		<property name="hordings">
+			<column name="HORDINGS" default="0" not-null="false" />
+		</property>
+	</class>
+</hibernate-mapping>

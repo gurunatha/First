@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tpsc.entities">
+	<joined-subclass name="LifeInsurancePlan" table="LIFE_INSURANCE_PLAN"
+		extends="InsurancePlan">
+		<key column="U_PLAN_NO" />
+		<property name="eligibleAge" column="MAX_ELIGIBLE_AGE"
+			not-null="true" />
+		<property name="planPeriod" column="PLAN_PERIOD" not-null="true" />
+		<property name="preMedicalCheckup" column="PRE_MEDICAL_CHECKUP_REQ"
+			not-null="true" />
+	</joined-subclass>
+</hibernate-mapping>
